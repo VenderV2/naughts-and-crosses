@@ -11,14 +11,14 @@ const computer = new Player('O');
 class Gameboard {
     constructor() {
         this.grid1  = '';
-        this.grid2  = '';
-        this.grid3  = '';
+        this.grid2  = 'na';
+        this.grid3  = 'na';
         this.grid4  = '';
-        this.grid5  = '';
-        this.grid6  = '';
+        this.grid5  = 'na';
+        this.grid6  = 'na';
         this.grid7  = '';
-        this.grid8  = '';
-        this.grid9  = '';
+        this.grid8  = 'na';
+        this.grid9  = 'na';
 
         this.gridLayout = 
         [[this.grid1,this.grid2,this.grid3],
@@ -81,14 +81,14 @@ function activeElement(elementID) {
 }
 
 function Update() {
-    for (let i = 0; i < startup.gridLayout.length ; i++) {
-        console.log(i)
-        if (startup.gridLayout[i].toString() === ['x','x','x'].toString()) {
+    for (let i = 0; i < startup.gridLayout.length; i++) {
+        console.log('i')  
+        if (startup.gridLayout[i].every(a => a === startup.gridLayout[i][0])) {
             alert('player wins')
-        }
-        
-        for (let j = 0; j < startup.gridLayout.length - 1; j++) {
-        
+        }     
+        for (let j = 0; j < startup.gridLayout.length; j++) {
+            console.log('j')
+
         }
     }
 }
