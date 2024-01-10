@@ -66,8 +66,6 @@ gridElements.forEach(element => {
         // console.log(element.className)
         activeElement(element.className)
     })
-
-
 });
 
 function activeElement(elementID) {

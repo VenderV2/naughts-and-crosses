@@ -9,6 +9,12 @@ body {
     grid-template-rows: repeat(3, 1fr);
     height: 800px;
     width: 800px;
-    background-color: rgb(235, 247, 240);
+    grid-gap:10px;
+
 }
 
+.tile {
+    background-color: rgb(34, 78, 23);
+    height: 100%;
+    width: 100%;
+}
