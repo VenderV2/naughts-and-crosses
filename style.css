@@ -1,0 +1,14 @@
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+.gameboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 800px;
+    width: 800px;
+    background-color: rgb(235, 247, 240);
+}
+
