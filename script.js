@@ -24,43 +24,40 @@ class Gameboard {
 
 class GameLogic {
     constructor() {
-        var playersTurn = true;
+        this.playersTurn = true;
 
-        if (playersTurn = true) {
+        if (this.playersTurn = true) {
             this.turn = 'player';
         }
-        else if (playersTurn = false) {
+        else if (this.playersTurn = false) {
             this.turn = 'computer';
         }
     }
 }
 
-const gameLogic = new GameLogic()
-console.log(gameLogic.turn)
+let gameLogic = new GameLogic()
+console.log(gameLogic.playersTurn)
 
 const gameboard = document.querySelector('.gameboard')
 const gridElements = document.querySelectorAll('#grid')
 gridElements.forEach(element => {
     element.addEventListener('click', () => {
-        
-        if (gameLogic.playersTurn = true) {
+        gameLogic.playersTurn = !gameLogic.playersTurn;
+        console.log(gameLogic.playersTurn)   
+        if (gameLogic.playersTurn == true) {
             console.log('x')
         }
-        else if (gameLogic.playersTurn = false) {
+        else if (gameLogic.playersTurn == false) {
             console.log('o')
         }
-        gameLogic.playersTurn = !gameLogic.playersTurn;
-        console.log(gameLogic.playersTurn)      
-    })
+   
+    }, {capture: true})
 
 
 });
 
-
-
-
-function tileActive() {
-    console.log()
+function say() {
+    console.log(gameLogic.playersTurn)
 }
 
 
