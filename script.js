@@ -2,7 +2,6 @@ class Player {
     constructor(sign) {
         this.sign = sign;
     }
-
 }
 
 const user = new Player('X');
@@ -86,13 +85,33 @@ function Update() {
     for (let i = 0; i < startup.gridLayout.length; i++) {
         console.log('i')  
         if (startup.gridLayout[i].every(a => a === startup.gridLayout[i][0])) {
-            alert('player wins')
+            if (gameLogic.playersTurn == false) {
+                console.log('player wins')
+            }
+            else if (gameLogic.playersTurn == true) {
+                console.log('computer wins')
+            }
         }     
     }
     for (let j = 0; j < startup.gridLayout.length; j++) {
         console.log('j')
         if (arrayColumn(startup.gridLayout, j).every(a => a === startup.gridLayout[0][j])) {
-            alert('player wins')
+            if (gameLogic.playersTurn == false) {
+                console.log('player wins')
+            }
+            else if (gameLogic.playersTurn == true) {
+                console.log('computer wins')
+            }
         }
     }
+
+    if (startup.gridLayout[1][1] == startup.gridLayout[0][0] && startup.gridLayout[2][2] == startup.gridLayout[0][0]) {
+        if (gameLogic.playersTurn == false) {
+            console.log('player wins')
+        }
+        else if (gameLogic.playersTurn == true) {
+            console.log('computer wins')
+        }
+    }
+    
 }
